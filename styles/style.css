@@ -107,12 +107,12 @@ body {
     display: flex;
     flex-direction: column;
 
-    a {
+    /* a {
       text-decoration: none;
       color: inherit;
       width: 100%;
       display: inline-block;
-    }
+    } */
     gap: 20px;
     button {
       width: 100%;
@@ -136,6 +136,10 @@ body {
       &.player {
         background: #31c3bd;
         box-shadow: inset 0px -8px 0px #118c87;
+
+        &:hover {
+          box-shadow: none;
+        }
       }
     }
   }
@@ -168,10 +172,23 @@ body {
       box-shadow: inset 0px -4px 0px #10212a;
       border-radius: 10px;
       padding: 13px 30px 19px 30px;
+
+      cursor: pointer;
+      transition: all 0.1s ease-in-out;
       svg {
         color: var(--gray);
         width: 20px;
         height: 20px;
+      }
+      &:hover {
+        background: var(--arda);
+        box-shadow: inset 0px -4px 0px var(--background);
+        svg {
+          color: var(--turkuaz);
+        }
+        p {
+          color: var(--turkuaz);
+        }
       }
       p {
         font-weight: bold;
@@ -213,6 +230,9 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
+
+      font-size: 30px;
+      color: red;
     }
   }
 
